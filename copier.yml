@@ -1,0 +1,30 @@
+_subdirectory: tmpl
+
+full_name:
+    type: str
+    help: Your full name
+    placeholder: John Doe
+
+email:
+    type: str
+    help: Your email address
+    placeholder: john.doe@example.com
+
+project_name:
+    type: str
+    help: The unmangled project name
+
+project_slug:
+    type: str
+    help: The mangled project name used as repo id and cmake config name
+    default: "{{ project_name|lower|replace('_', '-')|replace(' ', '-') }}"
+
+semver:
+    type: str
+    help: The current (semantic) version of the project
+    default: 0.0.0-alpha.1
+
+year:
+    type: str
+    help: The copyright year
+    default: 2022
