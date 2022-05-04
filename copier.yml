@@ -1,0 +1,15 @@
+_min_copier_version: "6.0.0b0"
+_subdirectory: tmpl
+
+_templates_suffix: .meta.jinja
+_envops:
+    keep_trailing_newline: true
+    # Since escaping template templates is a hassle we use the old copier 5 syntax
+    block_end_string: "%]"
+    block_start_string: "[%"
+    comment_end_string: "#]"
+    comment_start_string: "[#"
+    variable_end_string: "]]"
+    variable_start_string: "[["
+
+_exclude: ["~*", "*.py[co]", "__pycache__", ".git", ".DS_Store"]
